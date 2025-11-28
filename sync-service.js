@@ -18,7 +18,7 @@ const CONFIG = {
     userDatabase: process.env.DEFAULT_USER_DB || 'admin',
 
     // How often to sync (milliseconds)
-    syncInterval: parseInt(process.env.SYNC_INTERVAL) || 10000,
+    syncInterval: parseInt(process.env.SYNC_INTERVAL) || 1000,
 
     // Enable debug logging
     debug: process.env.DEBUG === 'true' || true
