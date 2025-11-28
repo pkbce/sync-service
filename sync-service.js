@@ -7,7 +7,9 @@ require('dotenv').config();
 
 const CONFIG = {
     // Laravel API endpoint
-    laravelApiUrl: process.env.LARAVEL_API_URL || 'https://jwt-prod.up.railway.app/api',
+    laravelApiUrl: process.env.LARAVEL_API_URL ?
+        (process.env.LARAVEL_API_URL.endsWith('/api') ? process.env.LARAVEL_API_URL : process.env.LARAVEL_API_URL + '/api')
+        : 'https://jwt-prod.up.railway.app/api',
 
     // Firebase Database URL (from Firebase Console)
     firebaseDatabaseUrl: process.env.FIREBASE_DATABASE_URL || 'https://wattch-48f16-default-rtdb.asia-southeast1.firebasedatabase.app',
