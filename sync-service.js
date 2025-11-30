@@ -6,7 +6,7 @@ const CONFIG = {
     laravelApiUrl: process.env.LARAVEL_API_URL ?
         (process.env.LARAVEL_API_URL.endsWith('/api') ? process.env.LARAVEL_API_URL : process.env.LARAVEL_API_URL + '/api')
         : 'https://jwt-prod.up.railway.app/api',
-    firebaseDatabaseUrl: process.env.FIREBASE_DATABASE_URL || 'https://wattch-48f16-default-rtdb.asia-southeast1.firebasedatabase.app',
+    firebaseDatabaseUrl: process.env.FIREBASE_DATABASE_URL || 'https://wattch-52370-default-rtdb.asia-southeast1.firebasedatabase.app',
     userDatabase: process.env.DEFAULT_USER_DB || 'admin',
     syncInterval: parseInt(process.env.SYNC_INTERVAL) || 1000,
     debug: process.env.DEBUG === 'true' || true
